@@ -34,3 +34,9 @@ console.log(autos);
 
 autos[5] = "Porsche";
 console.log(autos);
+
+
+//Saber si un objeto es un array
+console.log(Array.isArray(autos));
+
+console.log(autos instanceof Array);
