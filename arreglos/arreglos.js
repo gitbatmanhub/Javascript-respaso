@@ -26,3 +26,11 @@ console.log(autos);
 
 autos.push('Audi');
 console.log(autos);
+
+console.log(autos.length);
+//Agregar valores al final del array
+autos[autos.length]="Mazda";
+console.log(autos);
+
+autos[5] = "Porsche";
+console.log(autos);
