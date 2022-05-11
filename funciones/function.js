@@ -6,3 +6,9 @@ function miFunction(a, b){
 
 let resultado= miFunction(2,3);
 console.log("La suma es: "+ resultado);
+
+// Declaración de funcion tipo expresion
+let sumar = function (a,b){return a+b};
+
+resultado = sumar(1,2)
+console.log("La suma es: "+resultado);
