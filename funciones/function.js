@@ -12,3 +12,8 @@ let sumar = function (a,b){return a+b};
 
 resultado = sumar(1,2)
 console.log("La suma es: "+resultado);
+
+
+(function (a,b){
+    console.log("Ejecutando la función de suma: " + (a+b));
+})(3,4);
