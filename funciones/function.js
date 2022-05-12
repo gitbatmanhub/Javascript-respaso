@@ -11,7 +11,11 @@ console.log("La suma es: "+ resultado);
 
 
 // Declaración de funcion tipo expresion
-let sumar = function (a,b){return a+b};
+let sumar = function (a,b){
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    return a+b
+};
 
 resultado = sumar(1,2)
 console.log("La suma es: "+resultado);
@@ -32,8 +36,10 @@ console.log(miFuncionTexto)
 
 
 // Función tipo flecha en comparación a la tipo expresión
-
+/*
 const sumarFuncionTipoFlecha = (a,b) => a+b;
 resultado = sumarFuncionTipoFlecha(3,5);
 console.log(resultado);
 
+
+ */
