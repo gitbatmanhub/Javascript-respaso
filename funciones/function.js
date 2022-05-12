@@ -9,7 +9,7 @@ let resultado= miFunction(2,3);
 console.log("La suma es: "+ resultado);
 */
 
-
+/*
 // Declaración de funcion tipo expresion
 let sumar = function (a,b){
     console.log(arguments[0]);
@@ -17,8 +17,12 @@ let sumar = function (a,b){
     return a+b
 };
 
+
+
 resultado = sumar(1,2)
 console.log("La suma es: "+resultado);
+
+ */
 /*
 //Función que se llama a si misma
 (function (a,b){
@@ -43,3 +47,16 @@ console.log(resultado);
 
 
  */
+let resultado = sumarTodo(5, 4, 13, 10, 9, 10, 11, 3);
+console.log( resultado );
+
+function sumarTodo(){
+    let suma = 0;
+    for(let i = 0; i < arguments.length; i++){
+        suma += arguments[i]; // suma = suma + arguments[i]
+    }
+    return suma;
+}
+
+
+
