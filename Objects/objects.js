@@ -13,8 +13,7 @@ let persona ={
 }
 
 
+persona.tel = '0967792636';
+delete persona.tel;
 
-for(nombrePropiedad in persona){
-        console.log(nombrePropiedad);
-        console.log(persona[nombrePropiedad]);
-}
+console.log(persona)
