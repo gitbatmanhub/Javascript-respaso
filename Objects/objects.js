@@ -13,7 +13,8 @@ let persona ={
 }
 
 
-console.log(persona.nombre);
-console.log(persona.apellido);
-console.log(persona.edad);
-console.log(persona.nombreCompleto())
+
+for(nombrePropiedad in persona){
+        console.log(nombrePropiedad);
+        console.log(persona[nombrePropiedad]);
+}
