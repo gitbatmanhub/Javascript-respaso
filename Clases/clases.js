@@ -1,3 +1,5 @@
+
+
 class Persona{
     constructor(nombre, apellido) {
         this._nombre=nombre;
@@ -21,6 +23,11 @@ class Persona{
     nombreCompleto(){
         return this._nombre + ' ' + this._apellido;
     }
+    //Sobreescribiendo el metodo de la clase Padre
+    toString(){
+        //Se aplica polimorfismo
+        return this.nombreCompleto();
+    }
 
 }
 class Empleado extends Persona{
@@ -42,9 +49,10 @@ class Empleado extends Persona{
 
 let persona1 = new Persona('Edwin', 'Romero');
 persona1.nombre='Cesar';  //Set nombre
-console.log(persona1.nombre); //Get Nombre
+console.log(persona1.toString()); //Get Nombre
 
 let empleado1 = new Empleado('Nathaly','Torres', 'Docencia');
 console.log(empleado1);
 console.log(empleado1.nombreCompleto());
+console.log(empleado1.toString());
 
