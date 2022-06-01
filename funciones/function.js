@@ -62,7 +62,7 @@ function sumarTodo(){
 
 
  */
-
+/*
 //Paso por valor
  let x= 10;
 
@@ -71,4 +71,22 @@ function sumarTodo(){
  }
  miFunction(x);
 console.log(x);
-//console.log(a);
+
+
+ */
+
+//Paso por referencia
+
+
+const persona = {
+        nombre: 'Edwin',
+        apellido: 'Romero'
+}
+
+
+function cambiarValorObjeto(p1){
+    p1.nombre = 'Cesar';
+    p1.apellido= 'Orellana';
+}
+cambiarValorObjeto(persona);
+console.log(persona);
