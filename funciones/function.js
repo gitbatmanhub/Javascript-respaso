@@ -47,6 +47,8 @@ console.log(resultado);
 
 
  */
+
+/*
 let resultado = sumarTodo(5, 4, 13, 10, 9, 10, 11, 3);
 console.log( resultado );
 
@@ -59,4 +61,14 @@ function sumarTodo(){
 }
 
 
+ */
 
+//Paso por valor
+ let x= 10;
+
+ function miFunction (a){
+     a=20;
+ }
+ miFunction(x);
+console.log(x);
+//console.log(a);
