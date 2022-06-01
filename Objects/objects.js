@@ -1,21 +1,17 @@
-
-
-//Función contructor de objetos tipo persona
-
-function Persona(nombre, apellido, email){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.nombreCompleto= function (){
-                return this.nombre + ' ' + this.apellido;
+let persona1={
+        nombre: 'Edwin',
+        apellido: 'Romero',
+        nombreCompleto: function (){
+                return this.nombre+ ' '+ this.apellido;
         }
 }
 
-Persona.prototype.tel='44332211';
+let persona2 = {
+        nombre: 'Nathaly',
+        apellido: 'Torres'
+}
 
+//Uso de call para usar el metodo nombre completo usando el metodo de p1 en p2
+console.log(persona1.nombreCompleto());
 
-let padre = new Persona('Edwin', 'Romero', 'correo@gmail.com');
-console.log(padre.tel);
-let madre = new Persona('Maria', 'Romero', 'correo@gmail.com');
-console.log(madre.tel);
-
+console.log(persona1.nombreCompleto.call(persona2));
