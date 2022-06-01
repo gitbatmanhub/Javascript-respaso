@@ -16,4 +16,14 @@ let persona ={
 persona.tel = '0967792636';
 delete persona.tel;
 
-console.log(persona)
+console.log(persona);
+
+for (nombrePropiedad in persona){
+        console.log(persona[nombrePropiedad]);
+}
+
+let personaArray = Object.values(persona);
+console.log(personaArray)
+
+let personaString = JSON.stringify (persona);
+console.log(personaString)
