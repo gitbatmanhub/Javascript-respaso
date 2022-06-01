@@ -11,18 +11,11 @@ function Persona(nombre, apellido, email){
         }
 }
 
+Persona.prototype.tel='44332211';
+
 
 let padre = new Persona('Edwin', 'Romero', 'correo@gmail.com');
-console.log(padre.nombreCompleto());
+console.log(padre.tel);
 let madre = new Persona('Maria', 'Romero', 'correo@gmail.com');
-console.log(madre.nombreCompleto());
+console.log(madre.tel);
 
-
-let miObjeto = new Object(); //Opción más forma
-let miObjeto2= {}; //Opción más breve
-
-let miCadena1 = new String ('Hola');
-let miCadena2= 'Hola';
-
-let miNumero1= new Number(1);
-let miNumero2= 1;
