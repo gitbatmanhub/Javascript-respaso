@@ -28,6 +28,12 @@ class Persona{
         //Se aplica polimorfismo
         return this.nombreCompleto();
     }
+    static saludar(){
+        console.log("Hola que hace");
+    }
+    static saludar2(persona){
+        console.log(persona.nombre + ' ' + persona.apellido );
+    }
 
 }
 class Empleado extends Persona{
@@ -45,6 +51,7 @@ class Empleado extends Persona{
     nombreCompleto() {
        return super.nombreCompleto() + ' ' + this._departamento;
     }
+
 }
 
 let persona1 = new Persona('Edwin', 'Romero');
@@ -55,4 +62,13 @@ let empleado1 = new Empleado('Nathaly','Torres', 'Docencia');
 console.log(empleado1);
 console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
+//console.log(persona1.saludar()); No es posible llamar un metodo static desde un objeto
+//Pero si desde una clase
+/*
+
+Empleado.saludar();
+
+ */
+Persona.saludar();
+Persona.saludar2(persona1);
 
