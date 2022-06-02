@@ -1,14 +1,12 @@
 
 
 class Persona{
-    static contadorObjetosPersona =0; //atributo de clase
-    email = 'Valor Default email'; //atributo de objeto
+    static contadorPersonas =0; //atributo de clase
 
     constructor(nombre, apellido) {
         this._nombre=nombre;
         this._apellido=apellido;
-        Persona.contadorObjetosPersona ++;
-        console.log('Se incrementa contador: ' + Persona.contadorObjetosPersona);
+        this.idPersona= ++Persona.contadorPersonas;
     }
     get nombre(){
         return this._nombre;
@@ -26,7 +24,7 @@ class Persona{
         this._apellido= apellido;
     }
     nombreCompleto(){
-        return this._nombre + ' ' + this._apellido;
+        return this.idPersona + ' ' + this._nombre + ' ' + this._apellido;
     }
     //Sobreescribiendo el metodo de la clase Padre
     toString(){
@@ -60,27 +58,12 @@ class Empleado extends Persona{
 }
 
 let persona1 = new Persona('Edwin', 'Romero');
-persona1.nombre='Cesar';  //Set nombre
-console.log(persona1.toString()); //Get Nombre
+console.log(persona1.toString());
 
 let empleado1 = new Empleado('Nathaly','Torres', 'Docencia');
-console.log(empleado1);
-console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
-//console.log(persona1.saludar()); No es posible llamar un metodo static desde un objeto
-//Pero si desde una clase
-/*
 
-Empleado.saludar();
+//console.log(Persona.contadorPersonas);
+let persona2 = new Persona('Carmina', 'Salazar');
+console.log(persona2.toString());
 
- */
-Persona.saludar();
-Persona.saludar2(persona1);
-
-
-console.log(persona1.contadorObjetoPersona);
-console.log(Persona.contadorObjetosPersona);
-console.log(Empleado.contadorObjetosPersona);
-console.log(persona1.email);
-console.log(empleado1.email);
-console.log(Persona.email);
